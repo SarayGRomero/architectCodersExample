@@ -9,4 +9,36 @@
     </style>
 
     <style name="Theme.AsteroidTracker" parent="Base.Theme.AsteroidTracker" />
+
+    <style name="Text">
+        <item name="android:textColor">@color/blue_dark</item>
+    </style>
+    
+    <style name="Text.Bold">
+        <item name="android:fontFamily">@font/robotobold</item>
+    </style>
+    
+    <style name="Text.Regular">
+        <item name="android:fontFamily">@font/robotoregular</item>
+    </style>
+
+    <style name="Text.Light">
+        <item name="android:fontFamily">@font/robotolight</item>
+    </style>
+
+    <style name="Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="Text.Regular.Normal">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="Text.Bold.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="Big">
+        <item name="android:textSize">@dimen/text_size_big</item>
+    </style>
 </resources>

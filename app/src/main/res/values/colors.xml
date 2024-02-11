@@ -7,4 +7,8 @@
     <color name="secondary_color">#698EBF</color>
     <color name="tertiary_color">#DFE7F2</color>
     <color name="color_accent">#F22F1D</color>
+
+    <color name="item_background_color">#B2CEF4</color>
+
+    <color name="blue_dark">#022758</color>
 </resources>
