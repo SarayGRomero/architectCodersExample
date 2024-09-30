@@ -21,7 +21,11 @@ class HomeViewModel @Inject constructor(
     private val _state = MutableStateFlow(HomeState())
     val state: StateFlow<HomeState> = _state.asStateFlow()
 
-    fun getCharacters() {
+    init {
+        getCharacters()
+    }
+
+    private fun getCharacters() {
         viewModelScope.launch {
             showLoading()
             getCharactersUseCase()
