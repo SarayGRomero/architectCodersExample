@@ -6,9 +6,9 @@ coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-lifecycleRuntimeKtx = "2.8.4"
-activityCompose = "1.9.1"
-composeBom = "2024.08.00"
+lifecycleRuntimeKtx = "2.8.6"
+activityCompose = "1.9.2"
+composeBom = "2024.09.02"
 jetbrainsKotlinJvm = "1.9.0"
 androidx-compose-compiler = "1.5.13"
 hilt = "2.50"
@@ -18,6 +18,9 @@ moshi = "1.15.1"
 converterMoshi = "2.11.0"
 room = "2.6.1"
 ksp = "1.9.23-1.0.20"
+arrow = "1.1.5"
+navigationCompose = "1.2.0"
+coil = "2.5.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,9 +49,12 @@ moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", v
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+arrow-core = { group = "io.arrow-kt", name = "arrow-core", version.ref = "arrow" }
+navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "navigationCompose" }
+coil = {group = "io.coil-kt", name= "coil-compose", version.ref = "coil" }
 
 [bundles]
-compose = ["androidx-activity-compose", "androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling-preview", "androidx-material3"]
+compose = ["androidx-activity-compose", "androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling-preview", "androidx-material3", "navigation-compose"]
 retrofit = ["retrofit", "logging-interceptor"]
 moshi = ["moshi", "converter-moshi"]
 room = ["room-runtime", "room-ktx"]

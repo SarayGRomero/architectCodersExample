@@ -10,3 +10,8 @@ plugins {
 android {
     namespace = "com.architectcoders.rickandmortyapp"
 }
+
+dependencies {
+    implementation(libs.arrow.core)
+    implementation(libs.coil)
+}
