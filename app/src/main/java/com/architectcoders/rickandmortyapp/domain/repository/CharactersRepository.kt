@@ -1,7 +1,12 @@
 package com.architectcoders.rickandmortyapp.domain.repository
 
 import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
+import kotlinx.coroutines.flow.Flow
 
 interface CharactersRepository {
-    suspend fun getAllCharacters(): List<CharacterBo>
+    val characters: Flow<List<CharacterBo>>
+
+    suspend fun fetchAllCharacters()
+
+    fun findById(id: Long): Flow<CharacterBo>
 }

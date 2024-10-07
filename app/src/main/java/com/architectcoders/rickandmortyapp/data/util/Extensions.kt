@@ -3,9 +3,6 @@ package com.architectcoders.rickandmortyapp.data.util
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
-import com.architectcoders.rickandmortyapp.domain.model.Error
-import retrofit2.HttpException
-import java.io.IOException
 
 suspend fun <T> tryCall(action: suspend () -> T): Either<Throwable, T> = try {
     action().right()
@@ -13,8 +10,8 @@ suspend fun <T> tryCall(action: suspend () -> T): Either<Throwable, T> = try {
     e.left()
 }
 
-fun <DTO, BO> Either<Throwable, DTO>.handleResponse(
-    onSuccess: (DTO) -> BO
+suspend fun <DTO, BO> Either<Throwable, DTO>.handleResponse(
+    onSuccess: suspend (DTO) -> BO,
 ): BO {
     return this.fold({
         throw it

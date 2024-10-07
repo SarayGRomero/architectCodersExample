@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val getCharactersUseCase: GetCharactersUseCase
+    private val getCharactersUseCase: GetCharactersUseCase,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(HomeState())
@@ -26,8 +26,8 @@ class HomeViewModel @Inject constructor(
     }
 
     private fun getCharacters() {
+        showLoading()
         viewModelScope.launch {
-            showLoading()
             getCharactersUseCase()
                 .catch { cause -> onError(cause) }
                 .collect { data -> onSuccess(data) }
@@ -43,10 +43,10 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    private fun onError(cause: Throwable) {
+    private fun onError(error: Throwable) {
         _state.update {
             HomeState(
-                error = cause,
+                error = error,
                 loading = false
             )
         }
