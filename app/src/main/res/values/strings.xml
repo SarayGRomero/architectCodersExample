@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">RickAndMortyApp</string>
+
+    <string name="no_data_found_error">Se ha producido un error al recuperar los datos</string>
+    <string name="unknown_error">Se ha producido un error inesperado</string>
 </resources>
