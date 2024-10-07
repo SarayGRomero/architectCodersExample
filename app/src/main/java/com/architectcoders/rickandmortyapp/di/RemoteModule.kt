@@ -3,7 +3,7 @@ package com.architectcoders.rickandmortyapp.di
 import com.architectcoders.rickandmortyapp.data.remote.RickAndMortyService
 import com.architectcoders.rickandmortyapp.data.remote.datasource.RemoteDataSource
 import com.architectcoders.rickandmortyapp.data.remote.datasource.RemoteDataSourceImpl
-import com.architectcoders.rickandmortyapp.data.remote.repository.CharactersRepositoryImpl
+import com.architectcoders.rickandmortyapp.data.repository.CharactersRepositoryImpl
 import com.architectcoders.rickandmortyapp.domain.repository.CharactersRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -61,10 +61,7 @@ object RemoteModule {
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class AppDataModule {
+abstract class AppRemoteDataModule {
     @Binds
     abstract fun bindRemoteDataSource(remoteDatasource: RemoteDataSourceImpl): RemoteDataSource
-
-    @Binds
-    abstract fun bindCharactersRepository(charactersRepository: CharactersRepositoryImpl): CharactersRepository
 }
