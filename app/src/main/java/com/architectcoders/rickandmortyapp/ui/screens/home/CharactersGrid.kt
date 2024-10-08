@@ -14,11 +14,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -34,8 +36,8 @@ fun CharactersGrid(
     LazyVerticalGrid(
         columns = GridCells.Adaptive(120.dp),
         modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
         contentPadding = PaddingValues(4.dp)
     ) {
         items(characters) {
@@ -53,6 +55,7 @@ private fun CharacterItem(character: CharacterBo, onCharacterClick: () -> Unit) 
         modifier = Modifier
             .fillMaxHeight()
             .clickable { onCharacterClick() }
+            .clip(RoundedCornerShape(16.dp))
     ) {
         Box {
             AsyncImage(
@@ -61,7 +64,7 @@ private fun CharacterItem(character: CharacterBo, onCharacterClick: () -> Unit) 
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .aspectRatio(2 / 3f)
+                    .aspectRatio(2 / 2f)
             )
         }
         Box(
