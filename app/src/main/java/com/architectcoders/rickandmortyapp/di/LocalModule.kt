@@ -2,8 +2,8 @@ package com.architectcoders.rickandmortyapp.di
 
 import android.app.Application
 import androidx.room.Room
+import com.architectcoders.data.datasource.LocalDataSource
 import com.architectcoders.rickandmortyapp.data.local.database.CharacterDatabase
-import com.architectcoders.rickandmortyapp.data.local.database.datasource.LocalDataSource
 import com.architectcoders.rickandmortyapp.data.local.database.datasource.LocalDataSourceImpl
 import dagger.Binds
 import dagger.Module

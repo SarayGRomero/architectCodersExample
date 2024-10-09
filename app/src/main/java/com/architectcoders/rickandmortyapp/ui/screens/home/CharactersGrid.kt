@@ -25,13 +25,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
+import com.architectcoders.domain.model.CharacterBo
 
 @Composable
 fun CharactersGrid(
     characters: List<CharacterBo>,
     onClick: (CharacterBo) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     LazyVerticalGrid(
         columns = GridCells.Adaptive(120.dp),
@@ -50,7 +50,10 @@ fun CharactersGrid(
 }
 
 @Composable
-private fun CharacterItem(character: CharacterBo, onCharacterClick: () -> Unit) {
+private fun CharacterItem(
+    character: CharacterBo,
+    onCharacterClick: () -> Unit,
+) {
     Column(
         modifier = Modifier
             .fillMaxHeight()

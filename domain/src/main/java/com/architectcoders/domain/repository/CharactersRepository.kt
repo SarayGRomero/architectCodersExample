@@ -1,7 +1,7 @@
-package com.architectcoders.rickandmortyapp.domain.repository
+package com.architectcoders.domain.repository
 
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
 import kotlinx.coroutines.flow.Flow
+import com.architectcoders.domain.model.CharacterBo
 
 interface CharactersRepository {
     val characters: Flow<List<CharacterBo>>

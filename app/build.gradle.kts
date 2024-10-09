@@ -12,6 +12,9 @@ android {
 }
 
 dependencies {
-    implementation(libs.arrow.core)
     implementation(libs.coil)
+    implementation(libs.arrow.core)
+    implementation(project(":data"))
+    implementation(project(":domain"))
+    implementation(project(":usecases"))
 }

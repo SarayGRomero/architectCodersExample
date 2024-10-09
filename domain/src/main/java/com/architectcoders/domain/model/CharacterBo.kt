@@ -1,4 +1,4 @@
-package com.architectcoders.rickandmortyapp.domain.model
+package com.architectcoders.domain.model
 
 data class CharacterBo (
     val image: String,

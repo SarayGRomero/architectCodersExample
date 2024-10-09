@@ -1,6 +1,6 @@
 package com.architectcoders.rickandmortyapp.ui.screens.detail
 
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
+import com.architectcoders.domain.model.CharacterBo
 
 
 data class DetailState(

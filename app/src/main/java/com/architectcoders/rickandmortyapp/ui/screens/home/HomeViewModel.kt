@@ -2,8 +2,8 @@ package com.architectcoders.rickandmortyapp.ui.screens.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
-import com.architectcoders.rickandmortyapp.usecase.GetCharactersUseCase
+import com.architectcoders.domain.model.CharacterBo
+import com.architectcoders.usecases.GetCharactersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

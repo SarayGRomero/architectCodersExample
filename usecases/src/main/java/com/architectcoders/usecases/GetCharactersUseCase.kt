@@ -1,7 +1,7 @@
-package com.architectcoders.rickandmortyapp.usecase
+package com.architectcoders.usecases
 
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
-import com.architectcoders.rickandmortyapp.domain.repository.CharactersRepository
+import com.architectcoders.domain.model.CharacterBo
+import com.architectcoders.domain.repository.CharactersRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.onEmpty
 import javax.inject.Inject

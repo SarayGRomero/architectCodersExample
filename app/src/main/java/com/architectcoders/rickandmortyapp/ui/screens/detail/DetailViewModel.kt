@@ -2,9 +2,9 @@ package com.architectcoders.rickandmortyapp.ui.screens.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.architectcoders.domain.model.CharacterBo
 import com.architectcoders.rickandmortyapp.di.CharacterId
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
-import com.architectcoders.rickandmortyapp.usecase.GetCharacterByIDUseCase
+import com.architectcoders.usecases.GetCharacterByIDUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -16,7 +16,7 @@ import javax.inject.Inject
 @HiltViewModel
 class DetailViewModel @Inject constructor(
     @CharacterId private val characterId: Long,
-    private val getCharacterByIDUseCase: GetCharacterByIDUseCase
+    private val getCharacterByIDUseCase: GetCharacterByIDUseCase,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(DetailState())

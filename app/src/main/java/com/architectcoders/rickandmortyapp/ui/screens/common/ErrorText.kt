@@ -9,8 +9,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import com.architectcoders.domain.NoDataFoundException
 import com.architectcoders.rickandmortyapp.R
-import com.architectcoders.rickandmortyapp.domain.exceptions.NoDataFoundException
 
 @Composable
 fun ErrorText(error: Throwable, modifier: Modifier) {
@@ -26,7 +26,7 @@ fun ErrorText(error: Throwable, modifier: Modifier) {
 }
 
 @Composable
-private fun Throwable.toUiString() = when(this) {
+private fun Throwable.toUiString() = when (this) {
     is NoDataFoundException -> stringResource(id = R.string.no_data_found_error)
     else -> stringResource(id = R.string.unknown_error)
 }

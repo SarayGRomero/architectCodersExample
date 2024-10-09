@@ -18,9 +18,11 @@ moshi = "1.15.1"
 converterMoshi = "2.11.0"
 room = "2.6.1"
 ksp = "1.9.23-1.0.20"
-arrow = "1.1.5"
+arrow = "1.2.1"
 navigationCompose = "1.2.0"
 coil = "2.5.0"
+javaxInject = "1"
+corountines = "1.6.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -52,6 +54,8 @@ room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 arrow-core = { group = "io.arrow-kt", name = "arrow-core", version.ref = "arrow" }
 navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "navigationCompose" }
 coil = {group = "io.coil-kt", name= "coil-compose", version.ref = "coil" }
+javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInject" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "corountines" }
 
 [bundles]
 compose = ["androidx-activity-compose", "androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling-preview", "androidx-material3", "navigation-compose"]

@@ -22,7 +22,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
+import com.architectcoders.domain.model.CharacterBo
 
 @Composable
 fun CharacterContent(character: CharacterBo, modifier: Modifier = Modifier) {

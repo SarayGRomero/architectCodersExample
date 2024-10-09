@@ -1,6 +1,6 @@
-package com.architectcoders.rickandmortyapp.usecase
+package com.architectcoders.usecases
 
-import com.architectcoders.rickandmortyapp.domain.repository.CharactersRepository
+import com.architectcoders.domain.repository.CharactersRepository
 import javax.inject.Inject
 
 class GetCharacterByIDUseCase @Inject constructor(
