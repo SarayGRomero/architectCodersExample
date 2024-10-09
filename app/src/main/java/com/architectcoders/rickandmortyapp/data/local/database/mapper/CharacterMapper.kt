@@ -1,7 +1,7 @@
 package com.architectcoders.rickandmortyapp.data.local.database.mapper
 
+import com.architectcoders.domain.model.CharacterBo
 import com.architectcoders.rickandmortyapp.data.local.database.model.CharacterDbo
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
 
 fun CharacterDbo.toBo() = CharacterBo(
     id = id,

@@ -11,5 +11,5 @@ data class CharacterDbo(
     val species: String,
     val name: String,
     val locationName: String,
-    val status: String
+    val status: String,
 )

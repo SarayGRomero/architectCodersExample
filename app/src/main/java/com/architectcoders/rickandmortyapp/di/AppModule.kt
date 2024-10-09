@@ -1,7 +1,7 @@
 package com.architectcoders.rickandmortyapp.di
 
-import com.architectcoders.rickandmortyapp.data.repository.CharactersRepositoryImpl
-import com.architectcoders.rickandmortyapp.domain.repository.CharactersRepository
+import com.architectcoders.data.repository.CharactersRepositoryImpl
+import com.architectcoders.domain.repository.CharactersRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

@@ -14,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.architectcoders.domain.model.CharacterBo
 import com.architectcoders.rickandmortyapp.R
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
 import com.architectcoders.rickandmortyapp.ui.screens.Screen
 import com.architectcoders.rickandmortyapp.ui.screens.common.ErrorText
 import com.architectcoders.rickandmortyapp.ui.screens.common.Loading

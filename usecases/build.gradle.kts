@@ -5,9 +5,9 @@ plugins {
 
 dependencies {
     implementation(project(":domain"))
-    implementation(libs.kotlinx.coroutines.core)
+    implementation(project(":data"))
     implementation(libs.javax.inject)
-    implementation(libs.arrow.core)
+    implementation(libs.kotlinx.coroutines.core)
 }
 
 java {

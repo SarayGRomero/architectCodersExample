@@ -1,10 +1,8 @@
 package com.architectcoders.rickandmortyapp.di
 
+import com.architectcoders.data.datasource.RemoteDataSource
 import com.architectcoders.rickandmortyapp.data.remote.RickAndMortyService
-import com.architectcoders.rickandmortyapp.data.remote.datasource.RemoteDataSource
 import com.architectcoders.rickandmortyapp.data.remote.datasource.RemoteDataSourceImpl
-import com.architectcoders.rickandmortyapp.data.repository.CharactersRepositoryImpl
-import com.architectcoders.rickandmortyapp.domain.repository.CharactersRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Binds
@@ -45,7 +43,7 @@ object RemoteModule {
     fun provideRetrofit(
         @Named("OkHTTPClient") okHttpClient: OkHttpClient,
         @ApiUrl apiUrl: String,
-        moshi: Moshi
+        moshi: Moshi,
     ): Retrofit = Retrofit.Builder()
         .client(okHttpClient)
         .baseUrl(apiUrl)

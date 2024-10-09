@@ -1,4 +1,4 @@
-package com.architectcoders.rickandmortyapp.data.util
+package com.architectcoders.data.util
 
 import arrow.core.Either
 import arrow.core.left

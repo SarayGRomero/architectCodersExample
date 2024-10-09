@@ -1,25 +1,15 @@
 package com.architectcoders.rickandmortyapp.data.local.database.datasource
 
+import com.architectcoders.data.datasource.LocalDataSource
+import com.architectcoders.data.util.handleResponse
+import com.architectcoders.data.util.tryCall
+import com.architectcoders.domain.model.CharacterBo
 import com.architectcoders.rickandmortyapp.data.local.database.CharacterDao
 import com.architectcoders.rickandmortyapp.data.local.database.mapper.toBo
 import com.architectcoders.rickandmortyapp.data.local.database.mapper.toDbo
-import com.architectcoders.rickandmortyapp.data.util.handleResponse
-import com.architectcoders.rickandmortyapp.data.util.tryCall
-import com.architectcoders.rickandmortyapp.domain.model.CharacterBo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
-
-interface LocalDataSource {
-
-    val characters: Flow<List<CharacterBo>>
-
-    suspend fun isEmpty(): Boolean
-
-    suspend fun saveCharacters(characters: List<CharacterBo>)
-
-    fun findById(id: Long): Flow<CharacterBo>
-}
 
 class LocalDataSourceImpl @Inject constructor(
     private val characterDao: CharacterDao,
