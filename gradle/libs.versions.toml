@@ -23,6 +23,10 @@ navigationCompose = "1.2.0"
 coil = "2.5.0"
 javaxInject = "1"
 corountines = "1.6.4"
+mockitoKotlin = "5.1.0"
+mockitoInline = "5.2.0"
+junitJupiter = "5.8.1"
+mockitoJupiter = "5.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -56,6 +60,10 @@ navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose"
 coil = {group = "io.coil-kt", name= "coil-compose", version.ref = "coil" }
 javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInject" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "corountines" }
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockitoKotlin" }
+mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoInline" }
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
+mockito-jupiter = { group = "org.mockito", name = "mockito-junit-jupiter", version.ref = "mockitoJupiter" } #mockito con jupiter (jUnit5)
 
 [bundles]
 compose = ["androidx-activity-compose", "androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling-preview", "androidx-material3", "navigation-compose"]
