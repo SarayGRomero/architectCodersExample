@@ -17,4 +17,13 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":domain"))
     implementation(project(":usecases"))
+
+    testImplementation(project(":testShared"))
+    testImplementation(project(":appTestShared"))
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.mockito.jupiter)
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
