@@ -2,9 +2,10 @@ plugins {
     id("rickandmortyapp.android.application")
     id("rickandmortyapp.android.application.compose")
     id("rickandmortyapp.ksp")
-    id("rickandmortyapp.hilt-convention")
-    id("rickandmortyapp.retrofit-convention")
-    id("rickandmortyapp.room-convention")
+    id("rickandmortyapp.hilt")
+    id("rickandmortyapp.retrofit")
+    id("rickandmortyapp.room")
+    id("rickandmortyapp.app.test")
 }
 
 android {

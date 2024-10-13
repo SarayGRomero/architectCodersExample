@@ -12,6 +12,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.architectcoders.domain.model.CharacterBo
@@ -40,6 +41,7 @@ fun Home(vm: HomeViewModel = hiltViewModel(), onCharacterClick: (CharacterBo) ->
                     characters = it,
                     onClick = onCharacterClick,
                     modifier = Modifier.padding(padding)
+                        .testTag("characters_grid")
                 )
             }
 

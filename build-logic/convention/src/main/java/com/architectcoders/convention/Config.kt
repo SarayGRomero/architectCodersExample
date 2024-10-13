@@ -12,8 +12,8 @@ object Config {
         applicationId = "com.architectcoders.rickandmortyapp"
     )
     val jvm = JvmConfig(
-        javaVersion = JavaVersion.VERSION_1_8,
-        kotlinJvm = "1.8"
+        javaVersion = JavaVersion.VERSION_17,
+        kotlinJvm = "17"
     )
 }
 
