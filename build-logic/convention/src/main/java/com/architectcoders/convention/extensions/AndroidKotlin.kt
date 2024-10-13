@@ -30,6 +30,7 @@ internal fun Project.configureKotlinAndroid(
             testImplementation(lib("turbine"))
             androidTestImplementation(lib("androidx-junit"))
             androidTestImplementation(lib("androidx-espresso-core"))
+            androidTestImplementation(lib("androidx-espresso-contrib"))
             androidTestImplementation(lib("coroutines-test"))
         }
     }

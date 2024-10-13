@@ -16,6 +16,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.platform.testTag
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.architectcoders.rickandmortyapp.ui.screens.common.ErrorText
 import com.architectcoders.rickandmortyapp.util.checkNull
@@ -40,7 +41,7 @@ fun Detail(vm: DetailViewModel = hiltViewModel(), onBackClick: () -> Unit) {
         state.character?.let {
             CharacterContent(
                 character = it,
-                modifier = Modifier.padding(padding)
+                modifier = Modifier.padding(padding).testTag("character_${it.id}")
             )
         }
 

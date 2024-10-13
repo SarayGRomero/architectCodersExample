@@ -9,6 +9,10 @@ plugins {
 
 android {
     namespace = "com.architectcoders.rickandmortyapp"
+
+    defaultConfig {
+        testInstrumentationRunner = "com.architectcoders.rickandmortyapp.di.HiltTestRunner"
+    }
 }
 
 dependencies {
@@ -22,6 +26,9 @@ dependencies {
     testImplementation(project(":appTestShared"))
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.mockito.jupiter)
+    kspAndroidTest(libs.hilt.compiler)
+    androidTestImplementation(libs.hilt.test)
+    androidTestImplementation(libs.okhttp.mockwebserver)
 }
 
 tasks.withType<Test> {
