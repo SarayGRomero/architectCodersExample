@@ -23,9 +23,6 @@ internal fun Project.configureKotlinAndroid(
         dependencies {
             implementation(lib("androidx-core-ktx"))
             implementation(lib("androidx-lifecycle-runtime-ktx"))
-            testImplementation(lib("junit"))
-            testImplementation(lib("mockito-kotlin"))
-            testImplementation(lib("mockito-inline"))
             testImplementation(lib("coroutines-test"))
             testImplementation(lib("turbine"))
             androidTestImplementation(lib("androidx-junit"))

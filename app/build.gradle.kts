@@ -2,17 +2,14 @@ plugins {
     id("rickandmortyapp.android.application")
     id("rickandmortyapp.android.application.compose")
     id("rickandmortyapp.ksp")
-    id("rickandmortyapp.hilt-convention")
-    id("rickandmortyapp.retrofit-convention")
-    id("rickandmortyapp.room-convention")
+    id("rickandmortyapp.hilt")
+    id("rickandmortyapp.retrofit")
+    id("rickandmortyapp.room")
+    id("rickandmortyapp.app.test")
 }
 
 android {
     namespace = "com.architectcoders.rickandmortyapp"
-
-    defaultConfig {
-        testInstrumentationRunner = "com.architectcoders.rickandmortyapp.di.HiltTestRunner"
-    }
 }
 
 dependencies {
@@ -21,16 +18,4 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":domain"))
     implementation(project(":usecases"))
-
-    testImplementation(project(":testShared"))
-    testImplementation(project(":appTestShared"))
-    testImplementation(libs.junit.jupiter)
-    testImplementation(libs.mockito.jupiter)
-    kspAndroidTest(libs.hilt.compiler)
-    androidTestImplementation(libs.hilt.test)
-    androidTestImplementation(libs.okhttp.mockwebserver)
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
 }
